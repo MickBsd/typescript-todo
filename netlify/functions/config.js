@@ -6,7 +6,8 @@ exports.handler = async function (event, context) {
   .then((data) => dataTest = data);
   
   return {
-    body: JSON.stringify({ test: data })
+    statusCode: 200,
+    body: JSON.stringify({ dataTest })
   };
   // return {
 
