@@ -1,8 +1,5 @@
 console.log('Hello World!');
-window.onload = function() {
-    fetch("/.netlify/functions/api")
-    .then(response => response.json())
-    .then(json => {
-        console.log(json);
-    });
-};
+
+const { VARIABLE_TEST } = process.env;
+
+console.log(VARIABLE_TEST);
