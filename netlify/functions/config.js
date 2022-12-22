@@ -1,7 +1,7 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async function (event, context) {
-  const variableTest = process.env.VARIABLE_TEST;
+export async function handler (event, context) {
+  //const variableTest = process.env.VARIABLE_TEST;
   let dataTest;
   fetch('https://dog.ceo/api/breeds/image/random')
   .then((response) => response.json())
@@ -18,4 +18,4 @@ exports.handler = async function (event, context) {
   //   // // body: JSON.stringify({ message: "Hello World" }),
   //   body: JSON.stringify({ test: data }),
   // };
-};
+}
