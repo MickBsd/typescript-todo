@@ -5,6 +5,6 @@ exports.handler = async (event, context) => {
   // Return the value of the environment variable in the response
   return {
     statusCode: 200,
-    body: `The value of VARIABLE_TEST is: ${variableTest}`,
+    body: variableTest,
   };
 };
