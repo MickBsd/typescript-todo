@@ -1,5 +1,7 @@
 console.log('Hello World!');
 
+window.onload = () => {
+
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
@@ -9,3 +11,5 @@ btn.addEventListener('click', () => {
             console.log(json.api);
         })
 });
+
+}
