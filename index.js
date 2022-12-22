@@ -1,5 +1,6 @@
 console.log('test');
 
-const testKey = process.env.VARIABLE_TEST;
-
-alert(testKey);
+exports.handler = async (event, context) => {
+    const testKey = process.env.VARIABLE_TEST;
+    console.log(testKey);
+  }
