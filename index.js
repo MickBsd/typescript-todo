@@ -1,6 +1,11 @@
-console.log('test');
+console.log('Hello World!');
 
-exports.handler = async (event, context) => {
-    const testKey = process.env.VARIABLE_TEST;
-    console.log(testKey);
-  }
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+    fetch(".netlify/functions/api")
+        .then(response => response.json())
+        .then(json => {
+            console.log(json.api);
+        })
+});
