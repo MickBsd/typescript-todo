@@ -1,8 +1,8 @@
 console.log('Hello World!');
 window.onload = function() {
-    fetch(".netlify/functions/api")
+    fetch("/.netlify/functions/api")
     .then(response => response.json())
     .then(json => {
-        serverURL = json.api;
+        console.log(json);
     });
 };
