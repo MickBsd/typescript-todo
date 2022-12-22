@@ -1,7 +1,10 @@
-exports.handler = async function (event, context) {
+exports.handler = async (event, context) => {
+  // Retrieve the value of the VARIABLE_TEST environment variable
+  const variableTest = process.env.VARIABLE_TEST;
+
+  // Return the value of the environment variable in the response
   return {
     statusCode: 200,
-    // body: JSON.stringify({ message: "Hello World" }),
-    body: JSON.stringify({ test : env.process.VARIABLE_TEST }),
+    body: `The value of VARIABLE_TEST is: ${variableTest}`,
   };
 };
