@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 exports.handler = async function (event, context) {
   const variableTest = process.env.VARIABLE_TEST;
   let dataTest;
