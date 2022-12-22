@@ -1,4 +1,3 @@
-import { handler } from "./netlify/functions/config.js";
 
 console.log('Hello World!');
 
