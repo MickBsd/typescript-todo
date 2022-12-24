@@ -2,7 +2,8 @@ import fetch from 'node-fetch';
 
 export async function handler (event, context) {
   const variableTest = process.env.VARIABLE_TEST;
-  const url = "https://www.cityscan.fr/api/evaluations"
+  const url = "https://www.cityscan.fr/api/evaluations";
+  let dataTest;
 
   // return {
   //   statusCode: 200,
@@ -19,9 +20,11 @@ export async function handler (event, context) {
   .then((response) => {
       return response.json();
   }).then((data) => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ data })
-      };
+      dataTest = data;
   });
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ data })
+  };
 }
