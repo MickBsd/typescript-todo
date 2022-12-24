@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 
 export async function handler (event, context) {
   //const variableTest = process.env.VARIABLE_TEST;
@@ -19,3 +18,7 @@ export async function handler (event, context) {
   //   body: JSON.stringify({ test: data }),
   // };
 }
+
+
+
+// content.results.items.totalItems
