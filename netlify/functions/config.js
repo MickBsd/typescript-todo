@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 export async function handler (event, context) {
-  const variableTest = process.env.VARIABLE_TEST;
+  const apiKey = process.env.API8KEY;
   const url = "https://www.cityscan.fr/api/evaluations";
   let dataTest;
 
@@ -14,7 +14,7 @@ export async function handler (event, context) {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
-        "ApiKey": variableTest
+        "ApiKey": apiKey
     },
   })
   .then((response) => {
