@@ -5,7 +5,7 @@ export async function handler (event, context) {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ variableTest })
+    body: JSON.stringify({ message: variableTest })
   };
   
 //   await fetch(getUrl, {
