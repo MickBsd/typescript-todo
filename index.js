@@ -8,7 +8,7 @@
 
   fetch('/.netlify/functions/config')
   .then((response) => {
-    response.json();
+    return response.json();
   }).then((myJson) => {  
     console.log(myJson);
   });
