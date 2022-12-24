@@ -6,7 +6,7 @@
 //     alert(myJson);
 //   }
 
-  fetch('/.netlify/functions/config')
+  fetch('/netlify/functions/config')
   .then((response) => {
     response.json();
   }).then((myJson)=> {  
