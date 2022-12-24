@@ -1,4 +1,4 @@
-console.log('Hello World!');
+// console.log('Hello World!');
 
 const userAction = async () => {
     const response = await fetch('/.netlify/functions/config');
