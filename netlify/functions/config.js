@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 export async function handler (event, context) {
   const variableTest = process.env.VARIABLE_TEST;
   const url = "https://www.cityscan.fr/api/evaluations";
