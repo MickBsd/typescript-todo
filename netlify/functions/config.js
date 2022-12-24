@@ -15,10 +15,14 @@ export async function handler (event, context) {
     response.json())
 .then((data) => {
     console.log(data);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ data })
+    };
 });
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ data })
-  };
+  // return {
+  //   statusCode: 200,
+  //   body: JSON.stringify({ data })
+  // };
 }
