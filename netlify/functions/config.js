@@ -9,7 +9,7 @@ export async function handler (event, context) {
   //   body: JSON.stringify({ variableTest })
   // };
     
-  await fetch(getUrl, {
+  await fetch(url, {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
