@@ -16,9 +16,9 @@ export async function handler (event, context) {
         "ApiKey": "Db}2]uWrY5TS@*Q"
     },
   })
-  .then((response) => 
-      response.json())
-  .then((data) => {
+  .then((response) => {
+      return response.json();
+  }).then((data) => {
       return {
         statusCode: 200,
         body: JSON.stringify({ data })
