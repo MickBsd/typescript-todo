@@ -3,12 +3,7 @@ import fetch from 'node-fetch';
 export async function handler (event, context) {
   const apiKey = process.env.API_KEY;
   const url = "https://www.cityscan.fr/api/evaluations";
-  let dataTest;
-
-  // return {
-  //   statusCode: 200,
-  //   body: JSON.stringify({ variableTest })
-  // };
+  let data;
     
   await fetch(url, {
     method: "GET",
@@ -20,11 +15,11 @@ export async function handler (event, context) {
   .then((response) => {
       return response.json();
   }).then((data) => {
-      dataTest = data;
+      data = data;
   });
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ dataTest })
+    body: JSON.stringify({ data })
   };
 }
