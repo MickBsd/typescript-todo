@@ -14,7 +14,7 @@ export async function handler (event, context) {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
-        "ApiKey": "Db}2]uWrY5TS@*Q"
+        "ApiKey": variableTest
     },
   })
   .then((response) => {
