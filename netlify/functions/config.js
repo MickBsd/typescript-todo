@@ -2,7 +2,11 @@
 
 export async function handler (event, context) {
   const variableTest = process.env.VARIABLE_TEST;
-  const url = "https://www.cityscan.fr/api/evaluations";
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ variableTest })
+  };
   
 //   await fetch(getUrl, {
 //     method: "GET",
@@ -21,8 +25,5 @@ export async function handler (event, context) {
 //     };
 // });
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ variableTest })
-  };
+  
 }
