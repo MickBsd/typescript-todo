@@ -9,5 +9,5 @@
   fetch('/.netlify/functions/config').then(function(response) {
     return response.json();
   }).then(function(myJson) {  
-    alert(myJson);
+    console.log(myJson);
   });
