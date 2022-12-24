@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 export async function handler (event, context) {
-  const apiKey = process.env.API8KEY;
+  const apiKey = process.env.API_KEY;
   const url = "https://www.cityscan.fr/api/evaluations";
   let dataTest;
 
