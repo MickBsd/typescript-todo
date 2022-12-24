@@ -6,9 +6,9 @@
 //     alert(myJson);
 //   }
 
-  fetch('/netlify/functions/config')
-  .then((response) => {
-    response.json();
-  }).then((myJson)=> {  
+  fetch('/.netlify/functions/config')
+  .then(function(response) {
+    return response.json();
+  }).then(function(myJson) {  
     console.log(myJson);
   });
